@@ -106,7 +106,7 @@
     "jsonfile": "^4.0.0",
     "keyv": "^3.1.0",
     "lodash": "^4.17.21",
-    "lowercase-keys": "^1.0.1",
+    "lowercase-keys": "^3.0.0",
     "lru-cache": "^6.0.0",
     "matcher": "^3.0.0",
     "mimic-response": "^1.0.1",
