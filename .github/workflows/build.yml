@@ -21,7 +21,7 @@ jobs:
           node-version: 16
 
       - name: Build/release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+        uses: samuelmeuli/action-electron-builder@v1.6.0
         with:
           # GitHub令牌，自动提供给动作
           # (无需在回购设置中定义此秘密)
