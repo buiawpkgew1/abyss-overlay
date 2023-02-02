@@ -89,7 +89,7 @@
     "escape-string-regexp": "^4.0.0",
     "extract-zip": "^1.7.0",
     "fd-slicer": "^1.1.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^11.1.0",
     "get-stream": "^4.1.0",
     "global-agent": "^2.1.12",
     "global-tunnel-ng": "^2.7.1",
