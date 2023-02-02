@@ -113,7 +113,7 @@
     "minimist": "1.2.6",
     "mkdirp": "^0.5.5",
     "ms": "^2.1.2",
-    "normalize-url": "^4.5.0",
+    "normalize-url": "^8.0.0",
     "npm-conf": "^1.1.3",
     "object-keys": "^1.1.1",
     "once": "^1.4.0",
