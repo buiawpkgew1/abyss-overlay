@@ -136,7 +136,7 @@
     "string_decoder": "^1.1.1",
     "sumchecker": "^3.0.1",
     "tail": "^2.2.0",
-    "to-readable-stream": "^1.0.0",
+    "to-readable-stream": "^4.0.0",
     "tunnel": "^0.0.6",
     "type-fest": "^0.13.1",
     "typedarray": "^0.0.6",
