@@ -66,7 +66,7 @@
     "buffer-from": "^1.1.1",
     "cacheable-request": "^6.1.0",
     "clone-response": "^1.0.2",
-    "concat-stream": "^1.6.2",
+    "concat-stream": "^2.0.0",
     "config-chain": "^1.1.12",
     "core-js": "^3.9.1",
     "core-util-is": "^1.0.2",
