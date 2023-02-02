@@ -90,7 +90,7 @@
     "extract-zip": "^1.7.0",
     "fd-slicer": "^1.1.0",
     "fs-extra": "^8.1.0",
-    "get-stream": "^4.1.0",
+    "get-stream": "^6.0.1",
     "global-agent": "^2.1.12",
     "global-tunnel-ng": "^2.7.1",
     "globalthis": "^1.0.2",
