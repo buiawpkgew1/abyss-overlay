@@ -109,7 +109,7 @@
     "lowercase-keys": "^1.0.1",
     "lru-cache": "^6.0.0",
     "matcher": "^3.0.0",
-    "mimic-response": "^1.0.1",
+    "mimic-response": "^4.0.0",
     "minimist": "1.2.6",
     "mkdirp": "^0.5.5",
     "ms": "^2.1.2",
