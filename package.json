@@ -135,7 +135,7 @@
     "sprintf-js": "^1.1.2",
     "string_decoder": "^1.1.1",
     "sumchecker": "^3.0.1",
-    "tail": "^2.2.0",
+    "tail": "^2.2.6",
     "to-readable-stream": "^1.0.0",
     "tunnel": "^0.0.6",
     "type-fest": "^0.13.1",
