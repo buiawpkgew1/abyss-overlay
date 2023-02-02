@@ -804,6 +804,11 @@ duplexer3@^0.1.4:
   resolved "https://registry.npmjs.org/duplexer3/-/duplexer3-0.1.4.tgz"
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
+duplexer3@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-1.0.0.tgz#c27cf99f41135a362094d5cbaca7ae61c0c3fadf"
+  integrity sha512-6O5ndCyJ9CGF9cR2Yi3VFq1OvXXLEgX848InIOl8xUBPYwb8jn/93j10lGaZyLnMRa71IT5OHhURlOiVjH9OVg==
+
 ejs@^3.1.6:
   version "3.1.8"
   resolved "https://registry.npmjs.org/ejs/-/ejs-3.1.8.tgz"

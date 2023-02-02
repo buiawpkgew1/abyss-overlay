@@ -77,7 +77,7 @@
     "detect-node": "^2.0.4",
     "discord-rpc": "^4.0.1",
     "dotenv": "^16.0.1",
-    "duplexer3": "^0.1.4",
+    "duplexer3": "^1.0.0",
     "electron-is-dev": "^2.0.0",
     "electron-json-config": "^1.5.3",
     "electron-log": "^4.4.7",
