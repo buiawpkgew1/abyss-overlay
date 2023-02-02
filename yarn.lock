@@ -834,10 +834,10 @@ electron-is-dev@^2.0.0:
   resolved "https://registry.npmjs.org/electron-is-dev/-/electron-is-dev-2.0.0.tgz"
   integrity sha512-3X99K852Yoqu9AcW50qz3ibYBWY79/pBhlMCab8ToEWS48R0T9tyxRiQhwylE7zQdXrMnx2JKqUJyMPmt5FBqA==
 
-electron-json-config@^1.5.3:
-  version "1.5.3"
-  resolved "https://registry.npmjs.org/electron-json-config/-/electron-json-config-1.5.3.tgz"
-  integrity sha512-+nRzmoe9xlRZLABInTzSYPH5X1Z5bzHMoIPEMGvNGUGjHEBCoAR4n+iHYdC0vVOJjupJ4MpNLbtpo+vgCKN91A==
+electron-json-config@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/electron-json-config/-/electron-json-config-2.0.0.tgz#449ecd2d9c11394f99d24a4c4c8840e2ed1177c7"
+  integrity sha512-SMlnRxPvg7L4sBFiFweiQtVSUXhXzItFiE3VLMHmUKhnSZ1v0maa02AfF/v+na4qgfEPUDQexN9KS3/BaeMlUQ==
 
 electron-log@^4.4.7:
   version "4.4.7"
