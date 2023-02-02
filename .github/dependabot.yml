@@ -5,7 +5,8 @@ updates:
     schedule:
       interval: "daily"
     commit-message:
-      prefix: "🔧" 
+      prefix: "🔧"
+    open-pull-requests-limit: 99
       
   - package-ecosystem: "github-actions" # See documentation for possible values
     directory: "/" # Location of package manifests
