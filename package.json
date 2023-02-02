@@ -108,7 +108,7 @@
     "lodash": "^4.17.21",
     "lowercase-keys": "^1.0.1",
     "lru-cache": "^6.0.0",
-    "matcher": "^3.0.0",
+    "matcher": "^5.0.0",
     "mimic-response": "^1.0.1",
     "minimist": "1.2.6",
     "mkdirp": "^0.5.5",
