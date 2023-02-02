@@ -131,7 +131,7 @@
     "safe-buffer": "^5.1.2",
     "semver": "^6.3.0",
     "semver-compare": "^1.0.0",
-    "serialize-error": "^7.0.1",
+    "serialize-error": "^11.0.0",
     "sprintf-js": "^1.1.2",
     "string_decoder": "^1.1.1",
     "sumchecker": "^3.0.1",
