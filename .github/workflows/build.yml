@@ -35,7 +35,7 @@ jobs:
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "Latest-1.7.0"
+          automatic_release_tag: "Latest-1.7.1"
           prerelease: false
           title: "build"
           files: |
