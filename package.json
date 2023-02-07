@@ -54,7 +54,7 @@
   "email": "",
   "repository": "github:Chit132/abyss-overlay",
   "devDependencies": {
-    "electron": "^12.0.0",
+    "electron": "^23.0.0",
     "electron-builder": "^22.10.5",
     "electron-packager": "^15.2.0"
   },
