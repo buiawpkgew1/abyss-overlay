@@ -94,7 +94,7 @@
     "global-agent": "^2.1.12",
     "global-tunnel-ng": "^2.7.1",
     "globalthis": "^1.0.2",
-    "got": "^9.6.0",
+    "got": "^12.5.3",
     "graceful-fs": "^4.2.6",
     "http-cache-semantics": "^4.1.0",
     "inherits": "^2.0.4",
