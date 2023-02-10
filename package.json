@@ -110,7 +110,7 @@
     "lru-cache": "^6.0.0",
     "matcher": "^3.0.0",
     "mimic-response": "^1.0.1",
-    "minimist": "1.2.6",
+    "minimist": "1.2.8",
     "mkdirp": "^0.5.5",
     "ms": "^2.1.2",
     "normalize-url": "^4.5.0",
