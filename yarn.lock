@@ -1619,6 +1619,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lru-cache@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-8.0.3.tgz#42a2c84ec91426d165b0887783f6a0fed367402f"
+  integrity sha512-hDYyWLYUrrTuQQlZWe6U56i+t6UU7LnimwV9Tvvw0HadkTnD7VbErepoJVeNEfC4exBIcGwO8M7TQyF6HO5tQA==
+
 make-dir@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/make-dir/-/make-dir-3.1.0.tgz"
