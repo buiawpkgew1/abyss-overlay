@@ -12,7 +12,7 @@
 <body>
     <div id="base">
         <div class="menu">
-            <h1 class="menuitem">ABYSS</h1>
+            <h1 class="menuitem" id="logo_title">ABYSS</h1>
             <!--add tooltips for buttons-->
             <img src="" id="clientimg">
             <button name="Discord Server" class="menuitem tabsbuttons" id="discord"></button>
@@ -32,22 +32,22 @@
         <div id="settingsdiv">
             <div class="settings-container">
                 <div class="setting-group" style="z-index: 2;">
-                    <p>统计游戏模式 by:lroj</p>
+                    <p>Stats Gamemode</p>
                     <div class="custom-select-wrapper" id="gamemodebtn" style="filter: none;">
                         <div class="custom-select">
                             <div class="custom-select_trigger"><span style="text-align: center; width: 85%;">Select</span>
                                 <div class="arrow"></div>
                             </div>
                             <div class="custom-options">
-                                <span class="custom-option" id="bw">起床战争</span>
-                                <span class="custom-option" id="sw">空岛战争</span>
-                                <span class="custom-option" id="duels">决斗</span>
+                                <span class="custom-option" id="bw">Bedwars</span>
+                                <span class="custom-option" id="sw">Skywars</span>
+                                <span class="custom-option" id="duels">Duels</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="setting-group" style="z-index: 1;">
-                    <p>起床战争游戏模式</p>
+                    <p>Bedwars Stats Gamemode</p>
                     <div class="custom-select-wrapper" id="gmbtn" style="filter: none;">
                         <div class="custom-select">
                             <div class="custom-select_trigger"><span style="text-align: center; width: 85%;">Select</span>
@@ -64,44 +64,57 @@
                     </div>
                 </div>
                 <div class="setting-group">
-                    <p>自动who [测试版]</p>
+                    <p>Hypixel API Key</p>
+                    <div style="position: absolute; top: 4px; right: 3px;">
+                        <input type="text" class="api_key__input" id="api_key" name="Hypixel API Key" maxlength="36" size="36" spellcheck="false" placeholder="Click to paste API key">
+                        <button name="Revert" class="revert" id="revert_api-key" style="display: inline-block; width: 28px; height: 28px;"></button>
+                    </div>
+                    <span>This is your Hypixel API key. Hover over it to reveal and click to copy to clipboard.</span>
+                </div>
+                <div class="setting-group">
+                    <p>Minecraft IGN (username)</p>
+                    <input type="text" class="api_key__input" id="ign_input" name="IGN" maxlength="16" size="20" spellcheck="false" placeholder="Type your IGN here" style="position: absolute; top: 4px; right: 3px;">
+                    <span>You may choose to provide your Minecraft IGN (username) for access to extra features that require your IGN. Type it in and then click outside of the textbox.</span>
+                </div>
+                <div class="setting-group">
+                    <p>Autowho [BETA]</p>
                     <label class="switch">
                         <input type="checkbox" id="whobtn">
                         <span class="slider round"></span>
                     </label>
-                    <span>覆盖将自动为您在聊天中键入“/who”。加入大厅后，等待几秒钟再触摸键盘，以免干扰autowho。[AYOR]</span>
+                    <span>Overlay will automatically type /who in chat for you. After joining a lobby, wait a couple of seconds before touching your keyboard to avoid interfering with autowho. [AYOR]</span>
                 </div>
                 <div class="setting-group">
-                    <p>游戏开始通知</p>
+                    <p>Game Start Notifications</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="notifsbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>游戏开始时收到通知。您可以在大厅随意离开，不必担心游戏何时开始！</span>
+                    <span>Receive a notification when the game starts. Feel free to tab out during the lobby without having to worry about when the game will start!</span>
                 </div>
                 <div class="setting-group">
-                    <p>自动收缩/取消收缩</p>
+                    <p>Auto Shrink/Unshrink</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="shrinkbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>在关键事件中，覆盖图会自动在缩小和完全显示模式之间切换，这样当你专注于游戏时，你就不会错过任何重要的数据变化！当你的游戏开始时它会缩小，当玩家加入时它会打开。</span>
+                    <span>Overlay will automatically switch between its shrinked and full display modes during key events so you don't miss out on any important stats changes while focusing on your game! It will shrink when your game begins and it will open back up when a player is added.</span>
                 </div>
                 <div class="setting-group">
-                    <p>公会标签</p>
+                    <p>Guild Tags</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="gtagbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>在玩家名字旁边显示公会标签。每个玩家多调用1次Hypixel API。</span>
+                    <span>Show guild tags next to player names. Makes 1 more Hypixel API call per player.</span>
                 </div>
                 <div class="setting-group">
-                    <p>外部玩家</p>
+                    <p>External Players</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="callbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>显示在聊天中输入您的名字的玩家的统计数据；这些玩家会带着标签出现。有助于在大厅中寻找派对。同时显示向您发送聚会和好友请求的玩家。</span>
+                    <span>Show the stats of players who type your name in chat; these players will show up with the CALL tag. Helpful for finding parties in lobbies. Also show players who send you party and friend requests.<br><b>NOTE:</b> You MUST enter your IGN in the settings for this feature to work!</span>
                 </div>
                 <div class="setting-group">
                     <p>Discord Rich Presence</p>
@@ -109,53 +122,71 @@
                         <input class="settingspage" type="checkbox" id="rpcbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>在你的不和谐状态中炫耀你的叠加和统计！</span>
+                    <span>Show off your overlay and stats in your Discord status!</span>
                 </div>
                 <div class="setting-group" style="z-index: 2;">
-                    <p>不和谐RPC统计</p>
+                    <p>Discord RPC Stats</p>
                     <div class="custom-select-wrapper" id="rpcStats" style="width: 45%">
                         <div class="custom-select">
                             <div class="custom-select_trigger"><span style="text-align: center; width: 85%;">Select</span>
                                 <div class="arrow"></div>
                             </div>
                             <div class="custom-options">
-                                <span class="custom-option" id="rpcSession">会话统计</span>
-                                <span class="custom-option" id="rpcOverall">总体统计</span>
-                                <span class="custom-option" id="rpcNo">隐藏统计</span>
+                                <span class="custom-option" id="rpcSession">Session Stats</span>
+                                <span class="custom-option" id="rpcOverall">Overall Stats</span>
+                                <span class="custom-option" id="rpcNo">Hide Stats</span>
                             </div>
                         </div>
                     </div>
-                    <span>选择在你的不和谐状态中要展示的属性。</span>
+                    <span>Choose what stats to show off in your Discord status.</span>
                 </div>
                 <div class="setting-group">
-                    <p>Hypixel API密钥</p>
-                    <input type="text" id="api_key" name="Hypixel API Key" maxlength="36" size="36" placeholder="Click to paste API key" style="position: absolute; top: 4px; right: 3px;">
-                </div>
-                <div class="setting-group">
-                    <p>更改客户</p>
+                    <p>Change Client</p>
                     <div class="custom-select-wrapper" id="changeclient" style="width: 240px">
                         <div class="custom-select">
-                            <div class="custom-select_trigger" style="text-align: center;">选择客户端</div>
+                            <div class="custom-select_trigger" style="text-align: center;">Select Client</div>
                         </div>
                     </div>
-                    <span>更改覆盖检测到的《我的世界》客户端。<br>将重新开始叠加！</span>
+                    <span>Change your Minecraft client that the overlay detects.<br>WILL RESTART OVERLAY!</span>
                 </div>
                 <div class="setting-group">
-                    <p>自定义聊天日志文件</p>
+                    <p>Custom Chat Log File</p>
                     <div class="custom-select-wrapper" id="changelogpath" style="width: 260px">
                         <div class="custom-select">
-                            <div class="custom-select_trigger" style="text-align: center;">选择日志文件</div>
+                            <div class="custom-select_trigger" style="text-align: center;">Select Log File</div>
                         </div>
                     </div>
-                    <span>更改客户端的聊天日志文件路径。选择正确的latest.log文件，您的客户端会将其聊天日志写入该文件。<br>将重新开始叠加！</span>
+                    <span>Change client's chat log file path. Select the correct latest.log file that your client writes its chat logs to.<br>WILL RESTART OVERLAY!</span>
+                </div>
+                <!--
+                    To add a keybind, copy and paste one of the divs, changing the "data-type" and "data-default"
+                    Then add a case to the main.js in the switch statement with the logic in setKeybind
+                -->
+                <div class="setting-group">
+                    <p>Keybinds</p>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <p>Show/Hide Overlay:</p>
+                        <div class="custom-select_trigger keybind" data-type="peak" data-default="CommandOrControl+Shift+A" style="text-align: center;">CTRL + SHIFT + A</div>
+                        <button name="Revert" class="revert revertkeybind"></button>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <p>Clear Player List:</p>
+                        <div class="custom-select_trigger keybind" data-type="clear" data-default="CommandOrControl+Shift+Z" style="text-align: center;">CTRL + SHIFT + Z</div>
+                        <button name="Revert" class="revert revertkeybind"></button>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <p>Toggle Click-Through:</p>
+                        <div class="custom-select_trigger keybind" data-type="through" data-default="CommandOrControl+Shift+T" style="text-align: center;">CTRL + SHIFT + T</div>
+                        <button name="Revert" class="revert revertkeybind"></button>
+                    </div>
                 </div>
                 <div class="setting-group">
-                    <p>覆盖主题</p>
-                    <div style="position: absolute; top: 1px; right: 1px; width: 200px;">
+                    <p>Overlay Theme</p>
+                    <div style="position: absolute;top: 1px;right: 1px;width: 200px;display: flex;justify-content: space-between;">
                         <div style="overflow: visible; height: 35px; width: 30px; z-index: 1;">
                             <div id="color-picker"></div>
                         </div>
-                        <button name="Revert" id="revertcolor"></button>
+                        <button name="Revert" class="revert" id="revertcolor"></button>
                     </div>
                 </div>
             </div>
@@ -163,43 +194,43 @@
 
         <div id="infodiv">
             <p class="infopage" style="width: 100%; margin-left: 2px; text-align: left; color: var(--primaryColor);">➤Stats Coloring Key:</p>
-            <div class="infopage" style="background: #AAAAAA; color: #555555; width: 16%; margin-left: 5px;">坏</div>
-            <div class="infopage" style="background: #FFFFFF; color: #AAAAAA; width: 16%;">还行</div>
+            <div class="infopage" style="background: #AAAAAA; color: #555555; width: 16%; margin-left: 5px;">BAD</div>
+            <div class="infopage" style="background: #FFFFFF; color: #AAAAAA; width: 16%;">OK</div>
             <div class="infopage" style="background: #FFAA00; color: #FFFF55; width: 16%;">DECENT</div>
-            <div class="infopage" style="background: #00AAAA; color: #55FFFF; width: 16%;">好</div>
-            <div class="infopage" style="background: #AA0000; color: #FF5555; width: 16%;">传说</div>
-            <div class="infopage" style="background: #AA00AA; color: #FF55FF; width: 16%;">神</div>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤标签:</p>
-            <div class="infopage" style="color: #F3FF00; width: 16%; line-height: 23px; margin-left: 5px;">NICK - nick 玩家</div>
-            <div class="infopage" style="color: #FF5555; width: 16%; line-height: 23px;">SNPR - 潜在的狙击手</div>
-            <div class="infopage" style="color: #5555FF; width: 16%; line-height: 23px;">ALT - 潜在的替代项</div>
-            <div class="infopage" style="color: #FFB900; width: 20%; line-height: 23px;">PRTY - 可能在组队中</div>
-            <div class="infopage" style="color: #03C800; width: 20%; line-height: 23px;">P - 在您的组队中（仅限大厅）</div>
-            <div class="infopage" style="color: #00C2A2; width: 16%; line-height: 23px;">CALL - 在大厅中输入您的 IGN</div>
-            <div class="infopage" style="color: #37B836; width: 20%; line-height: 23px;">PREQ - 邀请你参加他们的组队</div>
-            <div class="infopage" style="color: #D6D600; width: 20%; line-height: 23px;">FREQ - 向您发送了加好友请求</div>
-            <div class="infopage" style="color: #36C700; width: 20%; line-height: 23px;">GLD - 公会列表中的玩家</div>
+            <div class="infopage" style="background: #00AAAA; color: #55FFFF; width: 16%;">GOOD</div>
+            <div class="infopage" style="background: #AA0000; color: #FF5555; width: 16%;">LEGEND</div>
+            <div class="infopage" style="background: #AA00AA; color: #FF55FF; width: 16%;">GOD</div>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Tags:</p>
+            <div class="infopage" style="color: #F3FF00; width: 16%; line-height: 23px; margin-left: 5px;">NICK - nicked player</div>
+            <div class="infopage" style="color: #FF5555; width: 16%; line-height: 23px;">SNPR - potential sniper</div>
+            <div class="infopage" style="color: #5555FF; width: 16%; line-height: 23px;">ALT - potential alt</div>
+            <div class="infopage" style="color: #FFB900; width: 20%; line-height: 23px;">PRTY - potentially in a party</div>
+            <div class="infopage" style="color: #03C800; width: 20%; line-height: 23px;">P - in your party (lobby only)</div>
+            <div class="infopage" style="color: #00C2A2; width: 16%; line-height: 23px;">CALL - typed your IGN in lobby</div>
+            <div class="infopage" style="color: #37B836; width: 20%; line-height: 23px;">PREQ - invited you to their party</div>
+            <div class="infopage" style="color: #D6D600; width: 20%; line-height: 23px;">FREQ - sent you a friend request</div>
+            <div class="infopage" style="color: #36C700; width: 20%; line-height: 23px;">GLD - player from your guild list</div>
             <div class="infopage" style="color: #D071DA; width: 20%; line-height: 23px;"><img src="https://i2.wp.com/erisly.com/assets/img/premium/boost.def36ba.png" width="25" height="25"> - Discord server booster</div>
-            <div class="infopage" style="color: #00FF00; width: 20%; line-height: 23px;"><span style="font-size: 26px">✔</span> - 已验证（加入不和谐服务器）</div>
-            <div class="infopage" style="color: red; width: 20%; line-height: 23px;"><span style="font-size: 26px">❤</span> - 捐赠（加入不和谐服务器）</div>
-            <p class="infopage" style="width: 100%; text-align: left; margin-left: 2px; margin-top: 25px; color: var(--primaryColor);">➤隐藏/显示：按 Ctrl+Shift+A</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤如何使用：</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧在游戏大厅中键入“/who”以使所有玩家在覆盖层上注册（可能需要几秒钟）。 ✧推荐：将叠加层放置在屏幕的左上角或右上角，让免提功能控制叠加层大小（阅读下文）</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤特征：</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧可通过拖动边缘调整大小。 ✧免提：游戏开始时自动缩小到标题栏，大厅中玩家发生变化时自动取消缩小，您可以使用右上角的绿色箭头切换此模式</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤会话统计信息：</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧单击标题栏上的时钟按钮以查看您的会话统计信息，以及自打开叠加层以来统计信息的变化。 ✧执行 /api new 将重置您的会话统计信息</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤指令：</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧“/w cl”将清除叠加层上的玩家。 ✧“/w！[IGN]”将显示您输入的玩家的[IGN]的统计数据 (例如: "/w !OhChit")</p>
+            <div class="infopage" style="color: #00FF00; width: 20%; line-height: 23px;"><span style="font-size: 26px">✔</span> - verified (join Discord server)</div>
+            <div class="infopage" style="color: red; width: 20%; line-height: 23px;"><span style="font-size: 26px">❤</span> - donating (join Discord server)</div>
+            <p class="infopage" style="width: 100%; text-align: left; margin-left: 2px; margin-top: 25px; color: var(--primaryColor);">➤To hide/show: CTRL+SHIFT+A</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤How to use:</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧Type "/who" in game lobby to get all players registered on overlay (might take a few secs). ✧Recommended: position overlay on top left or top right of screen and let the hands-free feature control overlay size (read more below)</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Features:</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧Resizable by dragging the edges. ✧Hands-free: automatically shrinks to just the title bar when game starts, automatically unshrinks when there is a player change in lobby, you can toggle this mode with the green arrow on the top right</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Session stats:</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧Click the clock button on the title bar to see your session stats, the changes in your stats since you opened the overlay. ✧Doing /api new will reset your session stats</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Commands:</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧"/w cl" will clear the players on the overlay. ✧"/w ![IGN]" will show you the stats of the [IGN] of the player your entered (example: "/w !OhChit")</p>
             <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤PS:</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧此覆盖处于早期阶段，因此预计会出现错误。它是由Chit（OhChit）制作的。这是我第一次制作应用程序，所以请不要期望太多。请加入 Discord 并向我发送任何错误或建议的消息！</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧This overlay is in an EARLY PHASE, so expect bugs. It was made by Chit (OhChit). It's my first time making an app so please don't expect much. Please join the Discord and message me with any bugs or suggestions!</p>
         </div>
 
         <div id="sessiondiv">
             <img id="sessionavatar" style="position: absolute; right: 10px; margin-top: 10px; filter: drop-shadow(2px 2px rgb(0, 0, 0));">
-            <p id="sessiontitle" class="sessionpage" style="font-size: 20px; position: absolute; width: 100%; color: var(--primaryColor);">Session Stats Unavailable</p>
+            <p id="sessiontitle" class="sessionpage" style="font-size: 20px; position: relative; width: 100%; color: var(--primaryColor);">Session Stats Unavailable</p>
             <p id="sessionign" class="sessionpage" style="font-size: 25px; margin-top: 40px; margin-left: 10px; text-align: left; display: block;">--</p>
-            <p id="sessionhtml" class="sessionpage" style="margin-top: 20px; margin-left: 10px; text-align: left;"><span style="color: red">ERROR LOADING STATS<br>CHECK YOUR API KEY</span></p>
+            <p id="sessionhtml" class="sessionpage" style="margin-top: 20px; margin-left: 10px; text-align: left;"><span style="color: red">ERROR LOADING STATS<br>ENTER YOUR IGN IN SETTINGS</span></p>
             <p id="sessiontime" class="sessionpage" style="right: 10px; bottom: 5px; position: absolute; font-size: 12px; text-align: right;">--</p>
         </div>
 
@@ -235,17 +266,17 @@
             </div>
         </div>
 
-        <p class="startup" style="color: var(--primaryColor)">选择您的客户:</p>
-        <button class="clientbutton" id="badlion" style="margin-left: 2.5%;">狮子端</button>
-        <button class="clientbutton" id="lunar">月亮端 1.8.9</button>
-        <button class="clientbutton" id="vanilla">Vanilla/Forge</button>
+        <p class="startup" style="color: var(--primaryColor)">SELECT YOUR CLIENT:</p>
+        <button class="clientbutton" id="badlion" style="margin-left: 2.5%;">Badlion</button>
+        <button class="clientbutton" id="lunar">Lunar 1.8.9</button>
+        <button class="clientbutton" id="vanilla">Vanilla/Other</button>
         <button class="clientbutton" id="pvplounge" style="margin-left: 2.5%;">PvP Lounge</button>
         <button class="clientbutton" id="labymod">Laby Mod</button>
         <button class="clientbutton" id="feather">Feather</button>
         <!-- <p class="clientbutton updatenotif" style="color: red; display: none; width: 100%; word-wrap: break-word; white-space: normal; text-align: center;">THIS VERSION IS OUT OF DATE. UPDATE BY JOINING THE DISCORD OR CLICKING THE RED UPDATE BUTTON</p> -->
         <!--<iframe src="https://discord.com/widget?id=822639649247592528&theme=dark" width="350" height="340" allowtransparency="true" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>-->
         <div id="titles">
-            <p class="titleitems" style="width: 46.75%; padding-left: 2px;" id="playertitle">玩家</p>
+            <p class="titleitems" style="width: 46.75%; padding-left: 2px;" id="playertitle">PLAYERS</p>
             <p class="titleitems" style="width: 6%;">TAG</p>
             <p class="titleitems" id="ws_nwl" style="width: 6.5%;">WS</p>
             <p class="titleitems" id="kdr" style="width: 9.5%;">FKDR</p>
@@ -269,7 +300,14 @@
             <p id="changelogVersion" style="width: 100%; height: 37px; margin: 0; padding: 0; background-color: rgb(75, 75, 75); text-align: center; font-size: 20px; color: var(--primaryColor);">Changelog</p>
             <p id="changelogClose">×</p>
             <p style="height: calc(100% - 37px); margin: 0; margin-left: 5px; padding: 0; overflow-y: auto; color: rgb(179, 179, 179);">
-                - <b>修复小写未定义错误.</b> 如果通常由于 API 密钥失败而未定义用户名，则会发生这种情况
+                - <b>Added new API key usage system.</b> Adhering to the new API changes by Hypixel, making your key more secure<br><br>
+                - <b>Added client auto-detection.</b> Attempts to automatically detect the most recently used client<br><br>
+                - <b>Added custom keybinds.</b> Change keybinds in settings<br><br>
+                - <b>Added new way to return home.</b> Can now click on the Abyss logo to get back to the player list<br><br>
+                - <b>Optimized guild tags.</b> Using new Hypixel API guild endpoints to make 1 less API call per person to fetch the guild tags<br><br>
+                - <b>Optimized versioning checker.</b> Checking remote overlay version is less bulky now<br><br>
+                - <b>Fixed API key blur.</b> The API key in settings is blurred better so it's more secure from someone watching your screen<br><br>
+                - <b>Streamlined session stats page.</b> No more stuttering when navigating to session stats page by using async API call
             </p>
         </div>
     </div>
