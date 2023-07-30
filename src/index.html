@@ -139,10 +139,10 @@
                                 <div class="arrow"></div>
                             </div>
                             <div class="custom-options">
-                                <span class="custom-option" id="rpcSession">Session Stats</span>
-                                <span class="custom-option" id="rpcOverall">Overall Stats</span>
-                                <span class="custom-option" id="rpcNo">Hide Stats</span>
-                            </div>
+                                <span class="custom-option" id="rpcSession">会话统计数据</span>
+                                <span class="custom-option" id="rpcOverall">总体统计数据</span>
+                                <span class="custom-option" id="rpcNo">隐藏统计数据</span>
+                            </div>                            
                         </div>
                     </div>
                     <span>Choose what stats to show off in your Discord status.</span>
@@ -200,38 +200,38 @@
         </div>
 
         <div id="infodiv">
-            <p class="infopage" style="width: 100%; margin-left: 2px; text-align: left; color: var(--primaryColor);">➤Stats Coloring Key:</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; text-align: left; color: var(--primaryColor)">➤统计数据颜色键：</p>
             <div class="infopage" style="background: #AAAAAA; color: #555555; width: 16%; margin-left: 5px;">BAD</div>
             <div class="infopage" style="background: #FFFFFF; color: #AAAAAA; width: 16%;">OK</div>
             <div class="infopage" style="background: #FFAA00; color: #FFFF55; width: 16%;">DECENT</div>
             <div class="infopage" style="background: #00AAAA; color: #55FFFF; width: 16%;">GOOD</div>
             <div class="infopage" style="background: #AA0000; color: #FF5555; width: 16%;">LEGEND</div>
             <div class="infopage" style="background: #AA00AA; color: #FF55FF; width: 16%;">GOD</div>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Tags:</p>
-            <div class="infopage" style="color: #F3FF00; width: 16%; line-height: 23px; margin-left: 5px;">NICK - nicked player</div>
-            <div class="infopage" style="color: #FF5555; width: 16%; line-height: 23px;">SNPR - potential sniper</div>
-            <div class="infopage" style="color: #5555FF; width: 16%; line-height: 23px;">ALT - potential alt</div>
-            <div class="infopage" style="color: #FFB900; width: 20%; line-height: 23px;">PRTY - potentially in a party</div>
-            <div class="infopage" style="color: #03C800; width: 20%; line-height: 23px;">P - in your party (lobby only)</div>
-            <div class="infopage" style="color: #00C2A2; width: 16%; line-height: 23px;">CALL - typed your IGN in lobby</div>
-            <div class="infopage" style="color: #37B836; width: 20%; line-height: 23px;">PREQ - invited you to their party</div>
-            <div class="infopage" style="color: #D6D600; width: 20%; line-height: 23px;">FREQ - sent you a friend request</div>
-            <div class="infopage" style="color: #36C700; width: 20%; line-height: 23px;">GLD - player from your guild list</div>
-            <div class="infopage" style="color: #D071DA; width: 20%; line-height: 23px;"><img src="https://i2.wp.com/erisly.com/assets/img/premium/boost.def36ba.png" width="25" height="25"> - Discord server booster</div>
-            <div class="infopage" style="color: #00FF00; width: 20%; line-height: 23px;"><span style="font-size: 26px">✔</span> - verified (join Discord server)</div>
-            <div class="infopage" style="color: red; width: 20%; line-height: 23px;"><span style="font-size: 26px">❤</span> - donating (join Discord server)</div>
-            <p class="infopage" style="width: 100%; text-align: left; margin-left: 2px; margin-top: 25px; color: var(--primaryColor);">➤To hide/show: CTRL+SHIFT+A</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤How to use:</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧Type "/who" in game lobby to get all players registered on overlay (might take a few secs). ✧Recommended: position overlay on top left or top right of screen and let the hands-free feature control overlay size (read more below)</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Features:</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧Resizable by dragging the edges. ✧Hands-free: automatically shrinks to just the title bar when game starts, automatically unshrinks when there is a player change in lobby, you can toggle this mode with the green arrow on the top right</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Session stats:</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧Click the clock button on the title bar to see your session stats, the changes in your stats since you opened the overlay. ✧Doing /api new will reset your session stats</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤Commands:</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧"/w cl" will clear the players on the overlay. ✧"/w ![IGN]" will show you the stats of the [IGN] of the player your entered (example: "/w !OhChit")</p>
-            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor);">➤PS:</p>
-            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧This overlay is in an EARLY PHASE, so expect bugs. It was made by Chit (OhChit). It's my first time making an app so please don't expect much. Please join the Discord and message me with any bugs or suggestions!</p>
-        </div>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor)">➤标签：</p>
+            <div class="infopage" style="color: #F3FF00; width: 16%; line-height: 23px; margin-left: 5px;">NICK - 更名的玩家</div>
+            <div class="infopage" style="color: #FF5555; width: 16%; line-height: 23px;">SNPR - 潜在狙击手</div>
+            <div class="infopage" style="color: #5555FF; width: 16%; line-height: 23px;">ALT - 潜在替代账号</div>
+            <div class="infopage" style="color: #FFB900; width: 20%; line-height: 23px;">PRTY - 可能在一个派对中</div>
+            <div class="infopage" style="color: #03C800; width: 20%; line-height: 23px;">P - 在您的派对中（仅限大厅）</div>
+            <div class="infopage" style="color: #00C2A2; width: 16%; line-height: 23px;">CALL - 在大厅中输入了您的IGN</div>
+            <div class="infopage" style="color: #37B836; width: 20%; line-height: 23px;">PREQ - 邀请您加入他们的派对</div>
+            <div class="infopage" style="color: #D6D600; width: 20%; line-height: 23px;">FREQ - 向您发送好友请求</div>
+            <div class="infopage" style="color: #36C700; width: 20%; line-height: 23px;">GLD - 来自您的公会列表的玩家</div>
+            <div class="infopage" style="color: #D071DA; width: 20%; line-height: 23px;"><img src="https://i2.wp.com/erisly.com/assets/img/premium/boost.def36ba.png" width="25" height="25"> - Discord服务器的赞助者</div>
+            <div class="infopage" style="color: #00FF00; width: 20%; line-height: 23px;"><span style="font-size: 26px">✔</span> - 已验证（加入Discord服务器）</div>
+            <div class="infopage" style="color: red; width: 20%; line-height: 23px;"><span style="font-size: 26px">❤</span> - 捐赠者（加入Discord服务器）</div>
+            <p class="infopage" style="width: 100%; text-align: left; margin-left: 2px; margin-top: 25px; color: var(--primaryColor)">➤隐藏/显示方式：CTRL+SHIFT+A</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor)">➤如何使用：</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧在游戏大厅中输入"/who"以获取在悬浮窗口注册的所有玩家（可能需要几秒钟）。✧建议：将悬浮窗口定位在屏幕的左上角或右上角，并让免手操作功能控制悬浮窗口的大小（详见下文）</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor)">➤特点：</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧通过拖动边缘调整大小。✧免手操作：游戏开始时自动缩小至仅显示标题栏，在大厅中有玩家变更时自动展开，您可以在右上角的绿色箭头上切换此模式</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor)">➤会话统计数据：</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧点击标题栏上的时钟按钮查看您的会话统计数据，以及自打开悬浮窗口以来的统计数据变化。✧执行"/api new"将重置您的会话统计数据</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor)">➤命令：</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧"/w cl"将清除悬浮窗口上的玩家。✧"/w ![IGN]"将显示您输入的玩家[IGN]的统计数据（例如："/w !OhChit"）</p>
+            <p class="infopage" style="width: 100%; margin-left: 2px; margin-top: 20px; text-align: left; color: var(--primaryColor)">➤附言：</p>
+            <p class="infopage" style="width: 100%; font-size: 15px; margin-left: 2px; text-align: left;">✧此悬浮窗口处于早期阶段，可能会出现错误。由Chit（OhChit）制作。这是我第一次制作应用程序，请不要期望太多。请加入Discord并向我发送任何错误或建议！</p>
+        </div>        
 
         <div id="sessiondiv">
             <img id="sessionavatar" style="position: absolute; right: 10px; margin-top: 10px; filter: drop-shadow(2px 2px rgb(0, 0, 0));">
@@ -242,14 +242,13 @@
         </div>
 
         <div id="musicdiv" style="filter: drop-shadow(2px 2px rgb(0, 0, 0));">
-            <p id="sessiontitle" class="rainbow" style="font-size: 22px; margin-top: 0; position: relative; text-align: center; width: 100%;">Overlay Music Party</p>
-            <p class="musicintro" style="text-align: center; font-size: 20px; color: rgb(174, 50, 205);"><b>Listen to music together with your party! They can all play songs and control the music vibe together</b></p>
-            <p class="musicintro" style="text-align: left; font-size: 17px; margin: 5px; color: #1d6cff;"><span style="font-size: 19; text-decoration: underline;"><b>Party chat usage commands:</b></span><br>• !play [song name] - Queue a song<br>• !remove [#] - Remove song # in queue<br>• !skip - Skips the current song<br>• !loop - Loop the queue<br>• !clear - Clear the entire queue</p>
-            <p class="musicintro" id="unlinked" style="text-align: left; font-size: 20px; margin: 5px; color: red; text-decoration: underline; display: none;"><b>ERROR: YOUR MC ACCOUNT IS NOT LINKED TO THE BOT IN THE DISCORD SERVER. Click the Discord button on the top to join the server and use the command ".link [IGN]"" in #bot-commands and try again</b></p>
-            <p class="musicintro" id="nomusicbots" style="text-align: left; font-size: 20px; margin: 5px; color: red; text-decoration: underline; display: none;"><b>ERROR: NO MUSIC BOTS AVAILABLE. All the music bots are currently being used currently. Try again later</b></p>
-            <div class="musicintro" style="text-align: center; margin-top: 15px; margin-bottom: 15px;"><button class="musicintro" id="startmusic">Start Music Party</button></div>
-            <p class="musicintro" style="text-align: left; font-size: 18px; margin: 5px; color: rgb(187, 9, 9);"><span style="text-decoration: underline;"><b>NOTE:</b></span> Your MC account must first be linked to the bot in the Abyss Overlay Discord server! Your private VC will be created in that server; you can join it and drag your party members in.</p>
-
+            <p id="sessiontitle" class="rainbow" style="font-size: 22px; margin-top: 0; position: relative; text-align: center; width: 100%;">Overlay音乐派对</p>
+            <p class="musicintro" style="text-align: center; font-size: 20px; color: rgb(174, 50, 205);"><b>与您的派对一起欣赏音乐！他们都可以播放歌曲并一起控制音乐氛围</b></p>
+            <p class="musicintro" style="text-align: left; font-size: 17px; margin: 5px; color: #1d6cff;"><span style="font-size: 19; text-decoration: underline;"><b>派对聊天使用命令：</b></span><br>• !play [歌曲名称] - 排队播放歌曲<br>• !remove [#] - 从队列中移除第#首歌曲<br>• !skip - 跳过当前歌曲<br>• !loop - 循环播放队列<br>• !clear - 清空整个队列</p>
+            <p class="musicintro" id="unlinked" style="text-align: left; font-size: 20px; margin: 5px; color: red; text-decoration: underline; display: none;"><b>错误：您的MC账号未与Discord服务器中的机器人链接。点击顶部的Discord按钮加入服务器并在#bot-commands频道中使用".link [IGN]"命令，然后重试</b></p>
+            <p class="musicintro" id="nomusicbots" style="text-align: left; font-size: 20px; margin: 5px; color: red; text-decoration: underline; display: none;"><b>错误：没有可用的音乐机器人。所有音乐机器人当前都在使用中。请稍后再试</b></p>
+            <div class="musicintro" style="text-align: center; margin-top: 15px; margin-bottom: 15px;"><button class="musicintro" id="startmusic">开始音乐派对</button></div>
+            <p class="musicintro" style="text-align: left; font-size: 18px; margin: 5px; color: rgb(187, 9, 9);"><span style="text-decoration: underline;"><b>注意：</b></span>您的MC账号必须先与Abyss Overlay Discord服务器中的机器人链接！您的私人语音频道将在该服务器中创建；您可以加入该频道并将您的派对成员拖入其中。</p>            
             <div class="musicplaying" style="width: 100%">
                 <button name="EndMusic" class="musicplaying" id="endmusic">End Session</button>
                 <p class="musicplaying" style="color: rgb(112, 112, 112); height: 14px; font-size: 14px; line-height: 14px; margin: 0 0 1px 10%;">NOW PLAYING</p>
@@ -273,13 +272,14 @@
             </div>
         </div>
 
-        <p class="startup" style="color: var(--primaryColor)">SELECT YOUR CLIENT:</p>
+        <p class="startup" style="color: var(--primaryColor)">选择您的客户端：</p>
         <button class="clientbutton" id="badlion" style="margin-left: 2.5%;">Badlion</button>
         <button class="clientbutton" id="lunar">Lunar 1.8.9</button>
-        <button class="clientbutton" id="vanilla">Vanilla/Other</button>
+        <button class="clientbutton" id="vanilla">Vanilla/其他</button>
         <button class="clientbutton" id="pvplounge" style="margin-left: 2.5%;">PvP Lounge</button>
         <button class="clientbutton" id="labymod">Laby Mod</button>
         <button class="clientbutton" id="feather">Feather</button>
+
         <!-- <p class="clientbutton updatenotif" style="color: red; display: none; width: 100%; word-wrap: break-word; white-space: normal; text-align: center;">THIS VERSION IS OUT OF DATE. UPDATE BY JOINING THE DISCORD OR CLICKING THE RED UPDATE BUTTON</p> -->
         <!--<iframe src="https://discord.com/widget?id=822639649247592528&theme=dark" width="350" height="340" allowtransparency="true" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>-->
         <div id="titles">
@@ -307,11 +307,11 @@
             <p id="changelogVersion" style="width: 100%; height: 37px; margin: 0; padding: 0; background-color: rgb(75, 75, 75); text-align: center; font-size: 20px; color: var(--primaryColor);">Changelog</p>
             <p id="changelogClose">×</p>
             <p style="height: calc(100% - 37px); margin: 0; margin-left: 5px; padding: 0; overflow-y: auto; color: rgb(179, 179, 179);">
-                - <b>Added centralized backend.</b> It is now optional if you want to input your Hypixel API key into the overlay<br><br>
-                - <b>Added local and serverside caching.</b> Caching will prevent unnecessary API calls, but stats will not always update immediately<br><br>
-                - <b>Added support for higher prestiges.</b> Bedwars prestiges up to 5000 stars are now supported<br><br>
-                - <b>Fixed loud startup sound.</b> Decreased the overlay startup splash screen sound
-            </p>
+                - <b>添加了集中式后端。</b> 现在，您可以选择是否将您的Hypixel API密钥输入到悬浮窗口中。<br><br>
+                - <b>添加了本地和服务器端缓存。</b> 缓存将防止不必要的API调用，但是统计数据不会立即更新。<br><br>
+                - <b>添加了对更高声望的支持。</b> Bedwars声望现在支持高达5000星星。<br><br>
+                - <b>修复了高音启动音。</b> 减少了悬浮窗口启动闪屏声音的音量。
+            </p>            
         </div>
     </div>
 </body>

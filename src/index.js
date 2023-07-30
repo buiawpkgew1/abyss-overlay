@@ -732,8 +732,8 @@ function autowho(){
 ipcRenderer.on('autowho-err', () => {
     config.set('settings.autowho', false);
     ModalWindow.open({
-        title: 'Autowho error',
-        content: 'Autowho was turned off because it failed to run on your PC. Java v8 or above is required! Check logs for more info',
+        title: 'Autowho 错误',
+        content: 'Autowho被关闭，因为在您的电脑上无法运行。需要Java v8或更高版本！请查看日志获取更多信息',
         type: -2
     });
 });
@@ -759,7 +759,7 @@ function main(event){
 
     if (!fs.existsSync(logpath)) {
         goodfile = false;
-        ModalWindow.open({ title: 'Client chat logs not found', content: `The chat logs file for ${Clients.displayNames[chosen[0]]} client was not found! You can set it manually if you know where it is using the "Select log file" button in settings. Overlay will not work unless the correct chat logs file is found.`, type: -1 })
+        ModalWindow.open({ title: '未找到客户端聊天记录', content: `未找到${Clients.displayNames[chosen[0]]}客户端的聊天记录文件！如果您知道其所在位置，可以在设置中使用"选择日志文件"按钮手动设置。除非找到正确的聊天记录文件，否则悬浮窗口将无法正常工作.`, type: -1 })
         return detected;
     }
 
@@ -1025,10 +1025,10 @@ $(() => {
         
         if (detectedClient && detectedClient[0] !== tevent.data.client) {
             ModalWindow.open({
-                title: 'New active client detected!',
-                content: `A more recently used client has been detected: <strong>${Clients.displayNames[detectedClient[0]]}</strong>. <br>
-                            The overlay is currently focused on client: ${Clients.displayNames[tevent.data.client]}. <br><br>
-                            If you are using a different client than ${Clients.displayNames[tevent.data.client]}, then go to overlay settings and click "Select Client"`,
+                title: '检测到新的活动客户端！',
+                content: `检测到一个更近期使用过的客户端： <strong>${Clients.displayNames[detectedClient[0]]}</strong>. <br>
+                            悬浮窗当前聚焦于客户端。: ${Clients.displayNames[tevent.data.client]}. <br><br>
+                            如果您使用的客户端与${Clients.displayNames[tevent.data.client]}不同，请前往悬浮窗设置，然后点击“选择客户端”。`,
                 type: -2
             });
         }
@@ -1297,14 +1297,14 @@ $(() => {
     $('#api_key').on('click', function() {
         if (goodkey && $(this).val().length === 36) {
             clipboard.writeText(HY_HEADER['API-Key']);
-            return ModalWindow.open({ title: 'API Key Copied to Clipboard' });
+            return ModalWindow.open({ title: 'API密钥已复制到剪贴板。' });
         }
         clipboardKey($(this));
     });
     $('#revert_api-key').on('click', function() {
         ModalWindow.invalidKey = false;
         ModalWindow.open({ title: "API Key Successfully Reset!", class: -4,
-            content: 'You have <b>removed</b> your Hypixel API Key from the overlay!'
+            content: '您已经从悬浮窗口中<b>删除</b>了您的Hypixel API密钥！'
         });
         goodkey = false;
         config.delete('key');
