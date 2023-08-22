@@ -633,8 +633,8 @@ function clearMusic(e = 0, err = false){
         }});
     }
     else{
-        if (err) dialog.showMessageBox(currentWindow, {title: 'Music Session Stopped!', detail: 'Check the Abyss Overlay Discord server to find out why your session stopped!', type: 'error'});
-        else dialog.showMessageBox(currentWindow, {title: 'Music Session Ended!', detail: 'Your music session should have ended and the bot should have left your VC. If not, then disconnect the bot manually. Feel free to stay in your VC though!'});
+        if (err) dialog.showMessageBox(currentWindow, {title: '音乐会话停止！', detail: '请查看Abyss Overlay的Discord服务器，了解为什么您的会话停止了！', type: 'error'});
+        else dialog.showMessageBox(currentWindow, {title: '音乐会话结束！', detail: '您的音乐会话应该已经结束，机器人应该已经离开了您的语音频道。如果没有，您可以手动断开机器人连接。您也可以继续留在语音频道里！'});
     }
 }
 function playMusic(){
@@ -743,7 +743,7 @@ function updateMusic(){
         }
     }, error: () => {
         clearMusic(1, -1);
-        console.log('API ERROR with getMusicSession'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+        console.log('API ERROR with getMusicSession'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
     }});
 }
 
@@ -953,7 +953,7 @@ function main(event){
                                 if (data.success === true) setTimeout(updateMusic, 2000);
                                 else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error playing this song. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
                             }, error: () => {
-                                dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+                                dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
                             }});
                         }
                     }
@@ -966,7 +966,7 @@ function main(event){
                                     if (data.success === true) setTimeout(updateMusic, 500);
                                     else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: `Error removing this song. Check if song #${ri} exists in your queue in the first place -_- Otherwise contact the devs on the Discord server please <3`, type: 'error'});
                                 }, error: () => {
-                                    dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+                                    dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
                                 }});
                             }
                         }
@@ -977,7 +977,7 @@ function main(event){
                             if (data.success === true){setTimeout(updateMusic, 500); music.playing = false;}
                             else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error skipping this song. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
                         }, error: () => {
-                            dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+                            dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
                         }});
                     }
                     else if (command[0] === 'clear'){
@@ -986,7 +986,7 @@ function main(event){
                             if (data.success === true) setTimeout(updateMusic, 500);
                             else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error clearing queue. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
                         }, error: () => {
-                            dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+                            dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
                         }});
                     }
                     else if (command[0] === 'loop'){
@@ -999,7 +999,7 @@ function main(event){
                             }
                             else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error toggling loop. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
                         }, error: () => {
-                            dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+                            dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
                         }});
                     }
                 }
@@ -1726,17 +1726,17 @@ $(() => {
         $.ajax({type: 'GET', async: true, dataType: 'json', url: `${musicIP}/requestMusicSession?uuid=${useruuid}`, success: (data) => {
             if (data.success === true) {
                 $('.musicintro').css('display', 'none'); $('.musicplaying').css('display', 'block'); $('.musicbutton').css('display', 'inline-block');
-                ModalWindow.open({ title: 'Music Session Created', content: 'Check your ping in the Abyss Overlay Discord server to continue <3', type: 1 });
+                ModalWindow.open({ title: '音乐会话已创建', content: '请在Abyss Overlay Discord服务器中检查您的ping以继续 <3', type: 1 });
                 music.session = true;
                 music.updatetimer = setInterval(updateMusic, 5000);
             }
             else {
-                if (data.error.includes('Discord ID')){$('#unlinked').css('display', 'block'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'This Minecraft account is not linked using the overlay\'s bot in the Abyss Overlay Discord server. Use the ".link [IGN]" command to link it first!', type: 'error'});}
-                else if (data.error.includes('No bots')){$('#nomusicbots').css('display', 'block'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'All music bots in the overlay server are currently being used! Keep checking to see when one frees up', type: 'error'});}
-                else{con.log('UNKNOWN API ERROR with requestMusicSession'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'API error. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});}
+                if (data.error.includes('Discord ID')){$('#unlinked').css('display', 'block'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: '错误！', detail: '此Minecraft账户尚未使用Abyss Overlay的机器人在Abyss Overlay Discord服务器中进行链接。请先使用 ".link [IGN]" 命令进行链接！', type: 'error'});}
+                else if (data.error.includes('No bots')){$('#nomusicbots').css('display', 'block'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: '错误！', detail: '覆盖层服务器中的所有音乐机器人当前正在使用中！请继续检查，看看是否有一个机器人空闲。', type: 'error'});}
+                else{con.log('请求音乐会话时出现未知API错误'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: '错误！', detail: 'API错误。请在Abyss Overlay Discord服务器中联系开发人员！', type: 'error' });}
             }
         }, error: () => {
-            console.log('API ERROR with requestMusicSession'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            console.log('请求音乐会话时出现API错误'); $('#startmusic').css('display', 'none'); dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }});
     });
     
@@ -1748,9 +1748,9 @@ $(() => {
                 else $('#playmusic').css('background-image', 'url(../assets/m_pause.png)');
                 setTimeout(updateMusic, 1000);
             }
-            else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error playing/pausing this song. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            else dialog.showMessageBox(currentWindow, {title: '错误！', detail: '播放/暂停这首歌曲时出现错误。请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }, error: () => {
-            dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }});
     });
     $('#loopmusic').on('click', () => {
@@ -1761,18 +1761,18 @@ $(() => {
                 else $('#loopmusic').css('filter', 'none');
                 setTimeout(updateMusic, 1000);
             }
-            else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error toggling loop. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            else dialog.showMessageBox(currentWindow, {title: '错误！', detail: '切换循环时出现错误。请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }, error: () => {
-            dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            dialog.showMessageBox(currentWindow, { title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }});
     });
     $('#skipmusic').on('click', () => {
         if (checkMusicLock() === false) return;
         $.ajax({type: 'GET', async: true, dataType: 'json', url: `${musicIP}/skipSong?uuid=${useruuid}`, success: (data) => {
             if (data.success === true){setTimeout(updateMusic, 500); music.playing = false;}
-            else dialog.showMessageBox(currentWindow, {title: 'ERROR!', detail: 'Error skipping this song. Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            else dialog.showMessageBox(currentWindow, {title: '错误！', detail: '跳过这首歌曲时出现错误。请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }, error: () => {
-            dialog.showMessageBox(currentWindow, {title: 'API ERROR!', detail: 'Music API could be down for the moment :( Contact the devs in the Abyss Overlay Discord server please!', type: 'error'});
+            dialog.showMessageBox(currentWindow, {title: 'API错误！', detail: '音乐API可能暂时不可用 :( 请在Abyss Overlay的Discord服务器中联系开发人员！', type: 'error'});
         }});
     });
 
