@@ -63,73 +63,73 @@
                     </div>
                 </div>
                 <div class="setting-group">
-                    <p>Minecraft IGN (username)</p>
-                    <input type="text" class="api_key__input" id="ign_input" name="IGN" maxlength="16" size="20" spellcheck="false" placeholder="Type your IGN here" style="position: absolute; top: 4px; right: 3px;">
-                    <span>You may choose to provide your Minecraft IGN (username) for access to extra features that require your IGN. Type it in and then click outside of the textbox.</span>
+                    <p>Minecraft游戏内名（用户名）</p>
+                    <input type="text" class="api_key__input" id="ign_input" name="IGN" maxlength="16" size="20" spellcheck="false" placeholder="在此输入您的游戏内名" style="position: absolute; top: 4px; right: 3px;">
+                    <span>您可以选择提供您的Minecraft游戏内名（用户名），以获取需要游戏内名的额外功能。在文本框内输入后，请点击文本框外的区域。</span>
                 </div>
                 <div class="setting-group">
-                    <p>Hypixel API Key</p>
+                    <p>Hypixel API密钥</p>
                     <div style="position: absolute; top: 4px; right: 3px;">
-                        <input type="text" class="api_key__input" id="api_key" name="Hypixel API Key" maxlength="36" size="36" spellcheck="false" placeholder="Click to paste API key">
+                        <input type="text" class="api_key__input" id="api_key" name="Hypixel API Key" maxlength="36" size="36" spellcheck="false" placeholder="点击粘贴API密钥">
                         <button name="Revert" class="revert" id="revert_api-key" style="display: inline-block; width: 28px; height: 28px;"></button>
                     </div>
-                    <span>*OPTIONAL* This is your Hypixel API key. You may use it when the overlay backend API is down in order to still use the overlay. Hover over it to reveal and click to copy to clipboard.<br><b>NOTE:</b> Using your own Hypixel API key in the overlay puts you in Developer mode and is to be used at your own risk!</span>
+                    <span>*可选* 这是您的Hypixel API密钥。在覆盖层后端API不可用时，您可以使用它来继续使用覆盖层。将鼠标悬停在其上可显示，并单击即可复制到剪贴板。<br><b>注意：</b>在覆盖层中使用您自己的Hypixel API密钥会将您置于开发者模式，并且需自行承担风险！</span>
                 </div>
                 <div class="setting-group">
-                    <p>Hypixel API Key Fallback</p>
+                    <p>Hypixel API密钥备用方案</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="fbkeybtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>Your own Hypixel API key will be used as fallback to fetch player stats when you have been ratelimited by our backend.<br><b>NOTE:</b> Only applies when you have entered a valid Hypixel API key above.</span>
+                    <span>当您被我们的后端限制访问时，您自己的Hypixel API密钥将作为备用方案用于获取玩家统计数据。<br><b>注意：</b>仅在您已经输入了有效的Hypixel API密钥时适用。</span>
                 </div>
                 <div class="setting-group">
-                    <p>Autowho [BETA]</p>
+                    <p>自动查看在线玩家 [测试版]</p>
                     <label class="switch">
                         <input type="checkbox" id="whobtn">
                         <span class="slider round"></span>
                     </label>
-                    <span>Overlay will automatically type /who in chat for you. After joining a lobby, wait a couple of seconds before touching your keyboard to avoid interfering with autowho. [AYOR]</span>
+                    <span>覆盖层将自动为您在聊天中输入 /who 命令。在加入大厅后，等待几秒钟再触摸键盘，以避免干扰自动查看在线玩家功能。[谨慎使用]</span>
                 </div>
                 <div class="setting-group">
-                    <p>Game Start Notifications</p>
+                    <p>游戏开始通知</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="notifsbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>Receive a notification when the game starts. Feel free to tab out during the lobby without having to worry about when the game will start!</span>
+                    <span>当游戏开始时收到通知。在游戏大厅中可以自由切换而不必担心游戏何时开始！</span>
                 </div>
                 <div class="setting-group">
-                    <p>Auto Shrink/Unshrink</p>
+                    <p>自动收缩/展开</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="shrinkbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>Overlay will automatically switch between its shrinked and full display modes during key events so you don't miss out on any important stats changes while focusing on your game! It will shrink when your game begins and it will open back up when a player is added.</span>
+                    <span>覆盖层将在关键事件期间自动在收缩和完整显示模式之间切换，以便您在专注于游戏时不会错过任何重要的统计数据变化！当游戏开始时，它将收缩，并在添加玩家时重新展开。</span>
                 </div>
                 <div class="setting-group">
-                    <p>Guild Tags</p>
+                    <p>公会标签</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="gtagbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>Show guild tags next to player names. Makes 1 more Hypixel API call per player.<br><b>NOTE:</b> Only applies when your own Hypixel API key is being used.</span>
+                    <span>在玩家姓名旁边显示公会标签。每个玩家需要额外的Hypixel API调用。<br><b>注意：</b>仅在使用您自己的Hypixel API密钥时适用。</span>
                 </div>
                 <div class="setting-group">
-                    <p>External Players</p>
+                    <p>外部玩家</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="callbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>Show the stats of players who type your name in chat; these players will show up with the CALL tag. Helpful for finding parties in lobbies. Also show players who send you party and friend requests.<br><b>NOTE:</b> You MUST enter your IGN in the settings for this feature to work!</span>
+                    <span>显示在聊天中提到您名字的玩家的统计数据；这些玩家会显示为带有CALL标签。在大厅中寻找队伍时很有帮助。还会显示发送给您派对和好友请求的玩家。<br><b>注意：</b>您必须在设置中输入您的游戏内名才能使用此功能！</span>
                 </div>
                 <div class="setting-group">
-                    <p>Discord Rich Presence</p>
+                    <p>Discord富媒体状态</p>
                     <label class="switch">
                         <input class="settingspage" type="checkbox" id="rpcbtn" checked>
                         <span class="slider round"></span>
                     </label>
-                    <span>Show off your overlay and stats in your Discord status!</span>
+                    <span>在您的Discord状态中展示您的覆盖层和统计数据！</span>
                 </div>
                 <div class="setting-group" style="z-index: 2;">
                     <p>Discord RPC Stats</p>
@@ -148,47 +148,47 @@
                     <span>Choose what stats to show off in your Discord status.</span>
                 </div>
                 <div class="setting-group">
-                    <p>Change Client</p>
+                    <p>更改客户端</p>
                     <div class="custom-select-wrapper" id="changeclient" style="width: 240px">
                         <div class="custom-select">
-                            <div class="custom-select_trigger" style="text-align: center;">Select Client</div>
+                            <div class="custom-select_trigger" style="text-align: center;">选择客户端</div>
                         </div>
                     </div>
-                    <span>Change your Minecraft client that the overlay detects.<br>WILL RESTART OVERLAY!</span>
+                    <span>更改覆盖层检测的您的Minecraft客户端。<br>将重新启动覆盖层！</span>
                 </div>
                 <div class="setting-group">
-                    <p>Custom Chat Log File</p>
+                    <p>自定义聊天记录文件</p>
                     <div class="custom-select-wrapper" id="changelogpath" style="width: 260px">
                         <div class="custom-select">
-                            <div class="custom-select_trigger" style="text-align: center;">Select Log File</div>
+                            <div class="custom-select_trigger" style="text-align: center;">选择日志文件</div>
                         </div>
                     </div>
-                    <span>Change client's chat log file path. Select the correct latest.log file that your client writes its chat logs to.<br>WILL RESTART OVERLAY!</span>
+                    <span>更改客户端的聊天记录文件路径。选择正确的latest.log文件，该文件是客户端写入其聊天记录的地方。<br>将重新启动覆盖层！</span>
                 </div>
                 <!--
                     To add a keybind, copy and paste one of the divs, changing the "data-type" and "data-default"
                     Then add a case to the main.js in the switch statement with the logic in setKeybind
                 -->
                 <div class="setting-group">
-                    <p>Keybinds</p>
+                    <p>按键绑定</p>
                     <div style="display:flex; align-items:center; gap:10px;">
-                        <p>Show/Hide Overlay:</p>
+                        <p>显示/隐藏覆盖层：</p>
                         <div class="custom-select_trigger keybind" data-type="peak" data-default="CommandOrControl+Shift+A" style="text-align: center;">CTRL + SHIFT + A</div>
                         <button name="Revert" class="revert revertkeybind"></button>
                     </div>
                     <div style="display:flex; align-items:center; gap:10px;">
-                        <p>Clear Player List:</p>
+                        <p>清除玩家列表：</p>
                         <div class="custom-select_trigger keybind" data-type="clear" data-default="CommandOrControl+Shift+Z" style="text-align: center;">CTRL + SHIFT + Z</div>
                         <button name="Revert" class="revert revertkeybind"></button>
                     </div>
                     <div style="display:flex; align-items:center; gap:10px;">
-                        <p>Toggle Click-Through:</p>
+                        <p>切换穿透点击：</p>
                         <div class="custom-select_trigger keybind" data-type="through" data-default="CommandOrControl+Shift+T" style="text-align: center;">CTRL + SHIFT + T</div>
                         <button name="Revert" class="revert revertkeybind"></button>
                     </div>
                 </div>
                 <div class="setting-group">
-                    <p>Overlay Theme</p>
+                    <p>覆盖层主题</p>
                     <div style="position: absolute;top: 1px;right: 1px;width: 200px;display: flex;justify-content: space-between;">
                         <div style="overflow: visible; height: 35px; width: 30px; z-index: 1;">
                             <div id="color-picker"></div>
@@ -250,8 +250,8 @@
             <div class="musicintro" style="text-align: center; margin-top: 15px; margin-bottom: 15px;"><button class="musicintro" id="startmusic">开始音乐派对</button></div>
             <p class="musicintro" style="text-align: left; font-size: 18px; margin: 5px; color: rgb(187, 9, 9);"><span style="text-decoration: underline;"><b>注意：</b></span>您的MC账号必须先与Abyss Overlay Discord服务器中的机器人链接！您的私人语音频道将在该服务器中创建；您可以加入该频道并将您的派对成员拖入其中。</p>            
             <div class="musicplaying" style="width: 100%">
-                <button name="EndMusic" class="musicplaying" id="endmusic">End Session</button>
-                <p class="musicplaying" style="color: rgb(112, 112, 112); height: 14px; font-size: 14px; line-height: 14px; margin: 0 0 1px 10%;">NOW PLAYING</p>
+                <button name="EndMusic" class="musicplaying" id="endmusic">结束会话</button>
+                <p class="musicplaying" style="color: rgb(112, 112, 112); height: 14px; font-size: 14px; line-height: 14px; margin: 0 0 1px 10%;">正在播放</p>
                 <p class="musicplaying" id="songname" style="color: var(--primaryColor); height: 22px; width: 80%; font-size: 19px; line-height: 19px; margin: 0 0 1px 10%; white-space: nowrap; overflow: hidden;">//</p>
                 <div class="musicplaying" style="width: 90%; height: 10px; margin: 0 auto; overflow: visible; font-size: 0; margin-bottom: 5px;">
                     <p id="currentsongtime" class="songtimer" style="text-align: right; direction: rtl;">0:00</p>
@@ -263,7 +263,7 @@
                 <button name="Next" class="musicbutton musicplaying" id="skipmusic" style="background-image: url(../assets/m_skip.png);"></button>
     
                 <div class="musicplaying" style="height: 280px; width: 60%; border: solid rgba(136, 136, 136, 0.74); border-width: 1px; border-radius: 10px; background-color: rgba(2, 2, 2, 0.199); margin: auto; margin-bottom: 5px; overflow: hidden;">
-                    <p style="height: 10%; width: 100%; margin: 0; text-align: center; letter-spacing: 1px; background-color: rgba(145, 145, 145, 0.26); filter: drop-shadow(0);">QUEUE<span id="queuenum" style="height: 100%; width: 0%; overflow: visible; float: right; text-align: right; right: 2px; direction: rtl; font-size: 15px; vertical-align: middle; color: rgb(131, 131, 131);">0</span></p>
+                    <p style="height: 10%; width: 100%; margin: 0; text-align: center; letter-spacing: 1px; background-color: rgba(145, 145, 145, 0.26); filter: drop-shadow(0);">队列<span id="queuenum" style="height: 100%; width: 0%; overflow: visible; float: right; text-align: right; right: 2px; direction: rtl; font-size: 15px; vertical-align: middle; color: rgb(131, 131, 131);">0</span></p>
                     <div style="height: 100%; overflow-x: hidden; overflow-y: auto;">
                         <ul id="queuediv" style="width: 100%; margin: 0; padding: 0; list-style-type: none; font-family: Minecraftia; font-size: 0;">
                         </ul>
@@ -283,14 +283,14 @@
         <!-- <p class="clientbutton updatenotif" style="color: red; display: none; width: 100%; word-wrap: break-word; white-space: normal; text-align: center;">THIS VERSION IS OUT OF DATE. UPDATE BY JOINING THE DISCORD OR CLICKING THE RED UPDATE BUTTON</p> -->
         <!--<iframe src="https://discord.com/widget?id=822639649247592528&theme=dark" width="350" height="340" allowtransparency="true" frameborder="0" sandbox="allow-same-origin allow-scripts"></iframe>-->
         <div id="titles">
-            <p class="titleitems" style="width: 46.75%; padding-left: 2px;" id="playertitle">PLAYERS</p>
-            <p class="titleitems" style="width: 6%;">TAG</p>
+            <p class="titleitems" style="width: 46.75%; padding-left: 2px;" id="playertitle">玩家</p>
+            <p class="titleitems" style="width: 6%;">标签</p>
             <p class="titleitems" id="ws_nwl" style="width: 6.5%;">WS</p>
             <p class="titleitems" id="kdr" style="width: 9.5%;">FKDR</p>
             <p class="titleitems" style="width: 7%;">WLR</p>
             <!--<p class="titleitems" style="width: 7.25%;">BBLR</p>-->
-            <p class="titleitems" id="kills" style="width: 11.25%;">FINALS</p>
-            <p class="titleitems" style="width: 9%;/*background-color: rgba(238, 130, 238, 0.644);*/">WINS</p>
+            <p class="titleitems" id="kills" style="width: 11.25%;">终结</p>
+            <p class="titleitems" style="width: 9%;/*background-color: rgba(238, 130, 238, 0.644);*/">胜场</p>
         </div>
         <div id="indexdiv">
             <ul class="indexes" id="ign" style="width: 46.75%; text-align: left; padding-left: 2px; list-style-type: none;"></ul>
@@ -307,8 +307,8 @@
             <p id="changelogVersion" style="width: 100%; height: 37px; margin: 0; padding: 0; background-color: rgb(75, 75, 75); text-align: center; font-size: 20px; color: var(--primaryColor);">Changelog</p>
             <p id="changelogClose">×</p>
             <p style="height: calc(100% - 37px); margin: 0; margin-left: 5px; padding: 0; overflow-y: auto; color: rgb(179, 179, 179);">
-                - <b>Added UUID caching.</b> UUIDs are now cached to avoid making unnecessary calls to Mojang API<br><br>
-                - <b>Reverted hotfix for Mojang API.</b> Mojang API is fixed now!
+                - <b>添加UUID缓存。</b> UUID现在被缓存，以避免不必要地调用Mojang API。<br><br>
+                - <b>恢复了Mojang API的修复。</b> Mojang API现在已修复！
             </p>
         </div>
     </div>
