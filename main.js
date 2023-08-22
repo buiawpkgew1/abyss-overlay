@@ -63,7 +63,7 @@ function setKeybind(bind, keybind) {
                     else if (!win.isVisible()) { win.showInactive(); win.moveTop(); }
                 }); 
             } catch (error) {
-                console.log(`Error whilst setting "${bind}" to "${keybind}"` , error)
+                console.log(`在将 "${bind}" 设置为 "${keybind}" 时出现错误：`, error);
                 break;
             }
          case 'clear':
@@ -72,7 +72,7 @@ function setKeybind(bind, keybind) {
                     win.webContents.send('clear')
                 });
             } catch(error) {
-                console.log(`Error whilst setting "${bind}" to "${keybind}"` , error)
+                console.log(`在设置 "${bind}" 为 "${keybind}" 时出现错误：`, error);
                 break;
             }
         case 'through':
@@ -83,7 +83,7 @@ function setKeybind(bind, keybind) {
                     else if(!through) win.setIgnoreMouseEvents(false);
                 }); 
             } catch (error) {
-                console.log(`Error whilst setting "${bind}" to "${keybind}"` , error)      
+                console.log(`设置 "${bind}" 为 "${keybind}" 时出现错误：`, error);   
                 break;
             }
       default:
@@ -128,14 +128,14 @@ function checkForUpdate() {
 autoUpdater.on('update-downloaded', info => {
     const options = {
         type: 'info',
-        title: `Abyss Overlay Update v${info.version} downloaded`,
-        message: 'A new update has been downloaded. Updating is strongly recommended! Automatically restart overlay now and install?',
-        detail: 'Overlay will automatically restart after update is installed',
-        buttons: ['Yes', 'No'],
+        title: `Abyss Overlay 更新 v${info.version} 已下载`,
+        message: '已下载新的更新。强烈建议进行更新！是否立即自动重启覆盖层并安装更新？',
+        detail: '在安装更新后，覆盖层将自动重启',
+        buttons: ['是', '否'],
         icon: path.join(__dirname, 'assets', 'logo.ico'),
         defaultId: 0,
-        checkboxLabel: 'Show update notes in browser'
-    }
+        checkboxLabel: '在浏览器中显示更新说明'
+    };
     dialog.showMessageBox(win, options).then(returned => {
         if (returned.checkboxChecked === true) shell.openExternal('https://github.com/Chit132/abyss-overlay/releases/latest');
         if (returned.response === 0) autoUpdater.quitAndInstall(true, true);
@@ -147,10 +147,10 @@ autoUpdater.on('error', (err) => {
     console.log(err);
     dialog.showMessageBox(win, {
         type: 'error',
-        title: 'Auto-update error',
-        message: 'There was an error auto-updating the overlay! Please install the new update manually ASAP',
-        detail: 'Click "Take me there" to take you to the download page for the new version',
-        buttons: ['Take me there', 'Later'],
+        title: '自动更新错误',
+        message: '在自动更新覆盖层时出现错误！请尽快手动安装新的更新',
+        detail: '点击"前往"将带您到新版本的下载页面',
+        buttons: ['前往', '稍后'],
         defaultId: 0
     }).then(returned => {
         if (returned.response === 0) shell.openExternal('https://github.com/Chit132/abyss-overlay/releases/latest');
